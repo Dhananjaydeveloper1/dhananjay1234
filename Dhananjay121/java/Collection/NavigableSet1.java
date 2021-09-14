@@ -43,7 +43,7 @@ public class NavigableSet1 {
 			System.out.println("last Element is:" + ts.last());
 
 			System.out.println("Size of the tree set: " + ts.size());
-			TreeSet<String> result_set = new TreeSet<String>();
+			TreeSet<String> result_set = new TreeSet<String>();//compare
 			
 	         for (String element : ts1){
 	             System.out.println(ts1.contains(element) ? "Yes" : "No");
