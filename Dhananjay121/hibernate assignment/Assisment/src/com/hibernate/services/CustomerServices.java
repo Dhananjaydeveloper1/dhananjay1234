@@ -15,7 +15,7 @@ public class CustomerServices {
 
 static Session sessionObj;
 	
-	/*------------------------Post request--------------------------------------*/
+	/*----Post request---*/
 	/* Method to store data in  database business logic */
 	public Integer addCustomer(String firstName, String lastName, String customerPnone) {
 		
@@ -42,7 +42,7 @@ static Session sessionObj;
 		return CustomerDetails;
 	}
 	
-	/*-----------------------------------Get Request-------------------------------*/
+	/*-----Get Request------*/
 	public void listOfAllCustomers() {
 		System.out.println("All the available Customers");
 		Transaction transaction=null;
@@ -72,7 +72,7 @@ static Session sessionObj;
 		}
 	}
 	
-	/*----------------------------------------PUT request---------------------*/
+	/*-----PUT request------*/
 	/*Method for updating the records in the database*/
 	public void updateCustomerDetails(int Customer_id,String mobilenumber) {
 		Transaction transaction=null;
@@ -100,11 +100,11 @@ static Session sessionObj;
 		}
 	}
 	
-	/*-------------------------------------Delete Request----------------------*/
+	/*----------Delete Request----*/
 	/*Method for deleteding the Customer */
 	public void deleteCustomerById(Integer CustomerId) {
 		
-		System.out.println("********************deleting record from the database***********************");
+		System.out.println("***deleting record from the database**");
 		Transaction transaction=null;
 		try {
 			sessionObj=HibernateUtil.buildSessionFactory().openSession();

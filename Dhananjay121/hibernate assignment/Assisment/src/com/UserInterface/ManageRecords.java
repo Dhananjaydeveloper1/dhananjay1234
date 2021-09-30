@@ -12,10 +12,10 @@ public class ManageRecords {
 
 	public static void main(String args[]) {
 		
-		/*-----------------------------------------Product Crud Operation-----------------------------------------------*/
+		/*---Product Crud Operation-----*/
 		ProductServices productServices=new ProductServices();
 		
-		Integer product1=productServices.addProduct("Clothes", "M size", "Shirt", 320, 5);
+		Integer product1=productServices.addProduct("Clothes", "L size", "T-Shirt", 200, 6);
 		
 		List<Integer> listProduct=new ArrayList<>();
 		listProduct.add(product1);
@@ -50,13 +50,13 @@ public class ManageRecords {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		/*------------------------------------------End of product crud operation-------------------------------------*/
+		/*------------End of product crud operation--------*/
 		
-		/*------------------------------------------Customer crud operation-------------------------------------------*/
+		/*------Customer crud operation-------*/
 		CustomerServices customerServices=new CustomerServices();
 		
-		Integer customer1=customerServices.addCustomer("Ankit", "Jaisawal", "8299883190");
-		Integer customer2=customerServices.addCustomer("Amit", "Jaisawal", "8293673190");
+		Integer customer1=customerServices.addCustomer("Dhananjay", "kumat", "766679237");
+		Integer customer2=customerServices.addCustomer("Rahul", "kumar", "7667926376");
 		List<Integer> listOfCustomer=new ArrayList<>();
 		listOfCustomer.add(customer1);
 		listOfCustomer.add(customer2);
@@ -77,7 +77,7 @@ public class ManageRecords {
 		
 		/*Update customer record in database*/
 		try {
-			customerServices.updateCustomerDetails(8, "8290063646");
+			customerServices.updateCustomerDetails(7, "76679161717");
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -85,12 +85,12 @@ public class ManageRecords {
 		
 		/*Delete customer record in database by id*/
 		try {
-			customerServices.deleteCustomerById(6);
+			customerServices.deleteCustomerById(5);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-		/*------------------------------------------End of crud operation---------------------------------------------*/
+		/*------End of crud operation-----*/
 	}
 }

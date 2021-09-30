@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
@@ -21,18 +21,18 @@ public class Cart {
 	private Integer cart_Id;
 	private Double totalPrice;
 	
-	@OneToMany(cascade =CascadeType.ALL)
+	@OneToOne(cascade =CascadeType.ALL)
 	@JoinColumn(name="cart_id")
 	@OrderColumn(name="type")
 	private List<Customer> customers;
 	
-	@OneToMany(cascade =CascadeType.ALL)
+	@OneToOne(cascade =CascadeType.ALL)
 	@JoinColumn(name="cart_id")
 	@OrderColumn(name="type")
 	private List<SalesOrder> salesOrders;
 	
 
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="cart_id")
 	@OrderColumn(name="type")
 	private List<CartItem> cartItems;

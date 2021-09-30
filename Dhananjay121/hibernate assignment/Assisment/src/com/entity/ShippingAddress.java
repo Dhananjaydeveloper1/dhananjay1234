@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
@@ -26,12 +26,12 @@ public class ShippingAddress {
 	private Integer zipcode;
 	private String country;
 	
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="shippingAddress_id")
 	@OrderColumn(name="type")
 	private List<Customer> customer1;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="shippingAddress_id")
 	@OrderColumn(name="type")
 	private List<SalesOrder> salesOrders;
