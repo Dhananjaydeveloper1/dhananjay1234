@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="hbm2ddl.auto">create</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="connection.url">jdbc:mysql://localhost/ecommerce</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Root@12</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+
+
+		<mapping class="com.example.demo.Customer" />
+		<mapping class="com.example.demo.ShippingAddress" />
+		<mapping class="com.example.demo.BillingAddress" />
+		<mapping class="com.example.demo.User" />
+		<mapping class="com.example.demo.Cart" />
+		<mapping class="com.example.demo.SalesOrder" />
+		<mapping class="com.example.demo.Product" />
+		<mapping class="com.example.demo.CartItem" />
+		<mapping class="com.example.demo.Authorities" />
+
+	</session-factory>
+
+</hibernate-configuration> 
