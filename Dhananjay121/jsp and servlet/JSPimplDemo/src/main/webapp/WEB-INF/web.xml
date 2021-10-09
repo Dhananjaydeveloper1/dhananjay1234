@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>  
+  
+<servlet>  
+<servlet-name>dhananjay</servlet-name>  
+<jsp-file>/dhananjay.jsp</jsp-file>  
+  
+<init-param>  
+<param-name>dname</param-name>  
+<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+</init-param>  
+  
+</servlet>  
+  
+<servlet-mapping>  
+<servlet-name>dhananjay</servlet-name>  
+<url-pattern>/dhananjay</url-pattern>  
+</servlet-mapping>  
+  
+</web-app>  
